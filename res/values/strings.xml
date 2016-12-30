@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, TriangleActivity!</string>
+    <string name="app_name">Triangle</string>
+    <string name="replay">Start Over</string>
+    <string name="start">Start</string>
+    <string name="sound">Sound Effect</string>
+    <string name="soundEnabled">Sound effect enabled</string>
+    <string name="soundDisabled">Sound effect disabled</string>
+    <string name="exit">Exit</string>
+    <string name="help">Help</string>
+    <string name="about">About</string>
+    <string name="gamesize">Game Size...</string>
+    <string-array name="game_sizes">
+        <item>Small (5)</item>
+        <item>Medium (6)</item>
+        <item>Large (7)</item>
+        <item>X-Large (8)</item>
+    </string-array>
+    <string name="checker_count">Checkers: </string>
+    <string name="status_running">Board size: </string>
+    <string name="status_gameover">Game Over</string>
+    <string name="help_text">
+        Jump over one checker a time and remove jumped checkers.
+        Try to leave as few checkers as you can.\n\n
+        (Click the screen to return...)
+    </string>
+    <string name="title_text">Tricky Triangle</string>
+    <string name="gamesize5">Small (5)</string>
+    <string name="gamesize6">Medium (6)</string>
+    <string name="gamesize7">Large (7)</string>
+    <string name="gamesize8">X-Large (8)</string>
+</resources>

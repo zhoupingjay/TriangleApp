@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    android:id="@+id/main_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    
+    <!-- This is the "home" screen of the game -->
+    <LinearLayout
+        android:id="@+id/home_screen"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:visibility="invisible">
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#00BF00"
+            android:textStyle="bold"
+            android:textSize="14pt"
+            android:layout_gravity="center"
+            android:text="@string/title_text">
+        </TextView>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/help_text"
+            android:layout_weight="1.0">
+        </TextView>
+        <RadioGroup
+            android:id="@+id/radio_gamesize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioButton
+                android:id="@+id/rdGameSize5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gamesize5"></RadioButton>
+            <RadioButton
+                android:id="@+id/rdGameSize6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gamesize6"></RadioButton>
+            <RadioButton
+                android:id="@+id/rdGameSize7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gamesize7"></RadioButton>
+            <RadioButton
+                android:id="@+id/rdGameSize8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gamesize8"></RadioButton>
+        </RadioGroup>
+        
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom">
+            <Button
+                android:id="@+id/btnStart"
+                android:text="@string/start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                />
+            <Button
+                android:id="@+id/exit2"
+                android:text="@string/exit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/layout_game"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14pt"
+            android:text="                                    "></TextView>
+        
+    <!--  android:layout_gravity="left|top"
+    android:layout_alignParentLeft="true"  -->
+        <LinearLayout
+            android:id="@+id/layout_status"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="top">
+            <TextView
+                android:id="@+id/slot_count"
+                android:text="@string/checker_count"
+                android:textSize="9pt"
+                android:textColor="#f0f0f0"
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|top"
+                android:layout_weight="1.0"
+                />
+            <TextView
+                android:id="@+id/status"
+                android:text="@string/status_running"
+                android:textColor="#f0f0f0"
+                android:textSize="9pt"
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|top"
+                />
+        </LinearLayout>
+        
+        <com.myproj.triangle.GameView2
+            android:id="@+id/game_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+        </com.myproj.triangle.GameView2>
+
+        <RelativeLayout
+            android:id="@+id/layout_buttons"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:visibility="visible">
+    
+            <!-- 
+            <Spinner 
+                android:id="@+id/game_size"
+                android:textSize="12pt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+            />
+             -->
+    
+            <Button
+                android:id="@+id/replay"
+                android:text="@string/replay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                />
+            <Button
+                android:id="@+id/exit"
+                android:text="@string/exit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+        
+        <LinearLayout
+            android:id="@+id/layout_ad"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/AdHeight">
+<!--        <com.google.ads.AdView android:id="@+id/adView"-->
+<!--                         android:layout_width="wrap_content"-->
+<!--                         android:layout_height="wrap_content"-->
+<!--                         ads:adUnitId="a14dd9e0565131e"-->
+<!--                         ads:adSize="BANNER"-->
+<!--                         ads:loadAdOnCreate="true"/>-->
+        </LinearLayout>
+    </LinearLayout>
+    
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/layout_help"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:visibility="invisible">
+        <ImageView
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_gravity="center|top"
+            android:scaleType="fitXY"
+            android:src="@drawable/help"
+            android:paddingTop="10dip"
+            android:paddingBottom="10dip">
+        </ImageView>
+        <TextView
+            android:text="@string/help_text"
+            android:textColor="#F0F0F0"
+            android:textSize="16dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ImageView01"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.0"
+            android:padding="10dip"></TextView>
+    </LinearLayout>
+
+</FrameLayout>
